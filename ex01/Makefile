@@ -1,4 +1,4 @@
-NAME := Fixed2
+NAME := ClapTrap
 
 # ---------------------------------------------------------#
 #                       DIRECTORIES                        #
@@ -12,6 +12,7 @@ SRCS_DIR := srcs/
 
 SRCS_PHONE :=	main.cpp \
 				ClapTrap.cpp \
+				ScavTrap.cpp \
 
 # ---------------------------------------------------------#
 #                       BUILD SOURCE                       #
@@ -67,7 +68,7 @@ CPPFLAGS += -MMD -MP
 
 CFLAGS += -std=c++98 -Wall -Wextra -Werror
 
-CC = c++
+CC = cc
 
 # ---------------------------------------------------------#
 #                           MOD                            #

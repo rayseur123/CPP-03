@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/18 15:47:50 by njooris           #+#    #+#             */
-/*   Updated: 2025/12/19 11:29:31 by njooris          ###   ########.fr       */
+/*   Created: 2025/12/18 16:01:12 by njooris           #+#    #+#             */
+/*   Updated: 2025/12/19 15:04:53 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 
-int	main(void)
+class	ScavTrap : public ClapTrap
 {
-	ClapTrap	tom("Tom");
-	ClapTrap	lucas("Lucas");
-	ScavTrap	scav();
-
-	lucas.attack("Tom");
-	tom.attack("Lucas");
-
-	lucas.beRepaired(1);
-	tom.beRepaired(1);
-	
-	lucas.takeDamage(5);
-	tom.takeDamage(5);
-	
-	return (0);
-}
+	public :
+		ScavTrap();
+		~ScavTrap(void);
+		void	attack(std::string &target) const;
+		
+};

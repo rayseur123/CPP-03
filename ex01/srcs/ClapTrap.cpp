@@ -6,12 +6,17 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 14:46:12 by njooris           #+#    #+#             */
-/*   Updated: 2025/12/18 15:51:34 by njooris          ###   ########.fr       */
+/*   Updated: 2025/12/19 14:56:13 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <iostream>
+
+ClapTrap::ClapTrap() : _name("default"), _point_health(10), _point_energy(10), _attack_damage(0)
+{
+	std::cout << "A new ClapTrap !" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _point_health(10), _point_energy(10), _attack_damage(0)
 {

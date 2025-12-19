@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 13:05:26 by njooris           #+#    #+#             */
-/*   Updated: 2025/12/18 15:31:21 by njooris          ###   ########.fr       */
+/*   Updated: 2025/12/19 11:36:48 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,17 @@ class	ClapTrap
 		size_t		_attack_damage;
 
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap &claptrap);
 		~ClapTrap(void);
 		
 		ClapTrap	&operator=(const ClapTrap &claptrap);
 
-		const std::string	&get_name() const;
-		const size_t		&get_point_health() const;
-		const size_t		&get_point_energy() const;
-		const size_t		&get_attack_damage() const;
+		const std::string	&get_name(void) const;
+		const size_t		&get_point_health(void) const;
+		const size_t		&get_point_energy(void) const;
+		const size_t		&get_attack_damage(void) const;
 
 		bool	can_do_something(void) const;
 		void	attack(const std::string &target) const;

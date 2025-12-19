@@ -6,12 +6,17 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 14:46:12 by njooris           #+#    #+#             */
-/*   Updated: 2025/12/18 15:51:34 by njooris          ###   ########.fr       */
+/*   Updated: 2025/12/19 14:56:29 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <iostream>
+
+ClapTrap::ClapTrap() : _name("default"), _point_health(10), _point_energy(10), _attack_damage(0)
+{
+	std::cout << "A new default ClapTrap !" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _point_health(10), _point_energy(10), _attack_damage(0)
 {
@@ -23,22 +28,22 @@ ClapTrap::~ClapTrap(void)
 	std::cout << "We lost a ClapTrap... " << std::endl;
 }
 
-const std::string	&ClapTrap::get_name() const
+const std::string	&ClapTrap::get_name(void) const
 {
 	return (_name);
 }
 
-const size_t		&ClapTrap::get_point_health() const
+const size_t		&ClapTrap::get_point_health(void) const
 {
 	return (_point_health);
 }
 
-const size_t		&ClapTrap::get_point_energy() const
+const size_t		&ClapTrap::get_point_energy(void) const
 {
 	return (_point_energy);
 }
 
-const size_t		&ClapTrap::get_attack_damage() const
+const size_t		&ClapTrap::get_attack_damage(void) const
 {
 	return (_attack_damage);
 }
@@ -60,7 +65,7 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &claptrap)
 	return (*this);
 }
 
-bool	ClapTrap::can_do_something(void) const
+bool	ClapTrap::can_do_something() const
 {
 	if (!_point_health)
 	{
