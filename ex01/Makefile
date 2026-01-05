@@ -68,7 +68,7 @@ CPPFLAGS += -MMD -MP
 
 CFLAGS += -std=c++98 -Wall -Wextra -Werror
 
-CC = cc
+CC = c++
 
 # ---------------------------------------------------------#
 #                           MOD                            #

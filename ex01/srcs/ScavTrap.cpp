@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:29:47 by njooris           #+#    #+#             */
-/*   Updated: 2025/12/19 15:09:10 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/05 15:34:30 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,26 @@ ScavTrap::ScavTrap(void)
 	std::cout << "A new ScavTrap !" << std::endl;
 }
 
+ScavTrap::ScavTrap(std::string name)
+{
+	_name = name;
+	_point_health = 100;
+	_point_energy = 50;
+	_attack_damage = 20;
+	std::cout << "A new ScavTrap !" << std::endl;
+}
+
 ScavTrap::~ScavTrap(void)
 {
 	std::cout << "We lost a ScavTrap... " << std::endl;	
 }
 
-void	ScavTrap::attack(std::string &target) const
+void	ScavTrap::attack(const std::string &target) const
 {
-	std::cout << "ScavTrap" << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
+	std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
 }
 
 void 	ScavTrap::guardGate(void) const
 {
-	
+	std::cout << "ScavTrap " << _name << " is now in GateKeeper mode" << std::endl;
 }
