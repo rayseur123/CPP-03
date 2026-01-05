@@ -6,14 +6,14 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 14:46:12 by njooris           #+#    #+#             */
-/*   Updated: 2025/12/19 14:56:29 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/05 13:44:54 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap() : _name("default"), _point_health(10), _point_energy(10), _attack_damage(0)
+ClapTrap::ClapTrap(void) : _name("default"), _point_health(10), _point_energy(10), _attack_damage(0)
 {
 	std::cout << "A new default ClapTrap !" << std::endl;
 }
@@ -65,7 +65,7 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &claptrap)
 	return (*this);
 }
 
-bool	ClapTrap::can_do_something() const
+bool	ClapTrap::can_do_something(void) const
 {
 	if (!_point_health)
 	{
@@ -87,7 +87,7 @@ void	ClapTrap::attack(const std::string &target) const
 	std::cout << "CalpTrap" << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
 }
 
-void	ClapTrap::takeDamage(unsigned int amount)
+void	ClapTrap::takeDamage(const unsigned int &amount)
 {
 	if (can_do_something())
 		return ;
@@ -103,7 +103,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	_point_energy--;
 }
 
-void	ClapTrap::beRepaired(unsigned int amount)
+void	ClapTrap::beRepaired(const unsigned int &amount)
 {
 	if (can_do_something())
 		return ;
