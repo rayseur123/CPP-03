@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 15:47:50 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/06 10:50:14 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/06 11:33:13 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 
 int	main(void)
 {
-	ClapTrap	tom("Tom");
-	ClapTrap	lucas("Lucas");
-	ScavTrap	scav("Nicolas");
-	FragTrap	frag("Devan");
+	// ClapTrap	tom("Tom");
+	// ClapTrap	lucas("Lucas");
+	// ScavTrap	scav("Nicolas");
+	// FragTrap	frag("Devan");
 	DiamondTrap	diam("Nikandr");
 
 	// lucas.attack("Tom");
@@ -42,7 +42,8 @@ int	main(void)
 	// scav.takeDamage(5);
 	diam.takeDamage(5);
 	
-	frag.guardGate();
-	scav.highFivesGuys();
+	// frag.guardGate();
+	// scav.highFivesGuys();
+	diam.whoAmI();
 	return (0);
 }
