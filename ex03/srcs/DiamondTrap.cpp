@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:56:37 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/06 10:49:45 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/06 11:24:57 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ DiamondTrap::DiamondTrap() : ClapTrap("default_clap_name"), _name("default")
 	std::cout << "A new DiamondTrap !" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"),  _name(name)
+DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"),  _name(name)
 {
 	_point_health = FragTrap::_point_health;
 	_point_energy = ScavTrap::_point_energy;
@@ -29,10 +29,13 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"),  _na
 	std::cout << "A new DiamondTrap !" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &DiamondTrap)
+DiamondTrap::DiamondTrap(const DiamondTrap& DiamondTrap)
 {
-	(void)DiamondTrap;
-	return;
+	_name = DiamondTrap.get_name();
+	_point_health = DiamondTrap.get_point_health();
+	_point_energy = DiamondTrap.get_point_energy();
+	_attack_damage = DiamondTrap.get_attack_damage();
+	std::cout << "A new DiamondTrap !" << std::endl;
 }
 
 DiamondTrap::~DiamondTrap(void)
@@ -40,7 +43,16 @@ DiamondTrap::~DiamondTrap(void)
 	std::cout << "We lost a DiamondTrap... " << std::endl;
 }
 
-void	DiamondTrap::attack(const std::string &target) const
+DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& diamondtrap)
+{
+	this->_name = diamondtrap.get_name();
+	this->_point_health = diamondtrap.get_point_health();
+	this->_point_energy = diamondtrap.get_point_energy();
+	this->_attack_damage = diamondtrap.get_attack_damage();
+	return (*this);
+}
+
+void	DiamondTrap::attack(const std::string& target) const
 {
 	ScavTrap::attack(target);
 }
