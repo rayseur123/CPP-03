@@ -6,23 +6,25 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:56:37 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/06 11:33:55 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/06 11:56:23 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 #include <iostream>
 
-DiamondTrap::DiamondTrap() : ClapTrap("default_clap_name"), _name("default")
+DiamondTrap::DiamondTrap() : _name("default")
 {
+	ClapTrap::_name = "default_clap_name";
 	_point_health = FragTrap::_point_health;
 	_point_energy = ScavTrap::_point_energy;
 	_attack_damage = FragTrap::_attack_damage;
 	std::cout << "A new DiamondTrap !" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"),  _name(name)
+DiamondTrap::DiamondTrap(const std::string& name) :  _name(name)
 {
+	ClapTrap::_name = name + "_clap_name";
 	_point_health = FragTrap::_point_health;
 	_point_energy = ScavTrap::_point_energy;
 	_attack_damage = FragTrap::_attack_damage;
@@ -31,6 +33,7 @@ DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"
 
 DiamondTrap::DiamondTrap(const DiamondTrap& DiamondTrap)
 {
+	ClapTrap::_name = DiamondTrap.get_name() + "_clap_name";
 	_name = DiamondTrap.get_name();
 	_point_health = DiamondTrap.get_point_health();
 	_point_energy = DiamondTrap.get_point_energy();
