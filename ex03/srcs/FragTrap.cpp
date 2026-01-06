@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:29:47 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/06 11:23:57 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/06 11:40:25 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ FragTrap::FragTrap(void)
 {
 	_name = "default";
 	_point_health = 100;
-	_point_energy = 50;
-	_attack_damage = 20;
+	_point_energy = 100;
+	_attack_damage = 30;
 	std::cout << "A new FragTrap !" << std::endl;
 }
 
