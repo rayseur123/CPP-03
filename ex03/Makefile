@@ -1,4 +1,4 @@
-NAME := FragTrap
+NAME := ClapTrap
 
 # ---------------------------------------------------------#
 #                       DIRECTORIES                        #
@@ -13,6 +13,8 @@ SRCS_DIR := srcs/
 SRCS_PHONE :=	main.cpp \
 				ClapTrap.cpp \
 				ScavTrap.cpp \
+				FragTrap.cpp \
+				DiamondTrap.cpp \
 
 # ---------------------------------------------------------#
 #                       BUILD SOURCE                       #
