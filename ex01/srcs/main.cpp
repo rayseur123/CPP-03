@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 15:47:50 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 12:04:51 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 13:27:03 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@ int	main(void)
 
 	lucas.attack("Tom");
 	tom.attack("Lucas");
-	tom.attack("Lucas");
+	scav.attack("Lucas");
 
 	lucas.beRepaired(repaired_value);
 	tom.beRepaired(repaired_value);
-	tom.beRepaired(repaired_value);
+	scav.beRepaired(repaired_value);
 	
 	lucas.takeDamage(damage_value);
 	tom.takeDamage(damage_value);
-	tom.takeDamage(damage_value);
+	scav.takeDamage(damage_value);
 	
 	scav.guardGate();
 	return (0);
