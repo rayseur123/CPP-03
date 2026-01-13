@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 15:47:50 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/05 16:28:32 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 10:36:35 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 int	main(void)
 {
+	unsigned int	repaired_value = 1;
+	unsigned int	damage_value = 5;
 	ClapTrap	tom("Tom");
 	ClapTrap	lucas("Lucas");
 	ScavTrap	scav("Nicolas");
@@ -27,15 +29,15 @@ int	main(void)
 	frag.attack("Lucas");
 	scav.attack("Lucas");
 
-	lucas.beRepaired(1);
-	tom.beRepaired(1);
-	frag.beRepaired(1);
-	scav.beRepaired(1);
+	lucas.beRepaired(repaired_value);
+	tom.beRepaired(repaired_value);
+	frag.beRepaired(repaired_value);
+	scav.beRepaired(repaired_value);
 	
-	lucas.takeDamage(5);
-	tom.takeDamage(5);
-	frag.takeDamage(5);
-	scav.takeDamage(5);
+	lucas.takeDamage(damage_value);
+	tom.takeDamage(damage_value);
+	frag.takeDamage(damage_value);
+	scav.takeDamage(damage_value);
 	
 	frag.guardGate();
 	scav.highFivesGuys();

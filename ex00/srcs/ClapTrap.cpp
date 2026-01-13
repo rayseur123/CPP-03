@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 14:46:12 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/06 12:29:16 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 10:24:52 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ClapTrap::ClapTrap(void) : _name("default"), _point_health(10), _point_energy(10
 	std::cout << "A new default ClapTrap !" << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string &name) : _name(name), _point_health(10), _point_energy(10), _attack_damage(0)
+ClapTrap::ClapTrap(const std::string& name) : _name(name), _point_health(10), _point_energy(10), _attack_damage(0)
 {
 	std::cout << "A new ClapTrap !" << std::endl;
 }
@@ -28,27 +28,27 @@ ClapTrap::~ClapTrap(void)
 	std::cout << "We lost a ClapTrap... " << std::endl;
 }
 
-const std::string	&ClapTrap::get_name(void) const
+const std::string&	ClapTrap::get_name(void) const
 {
 	return (_name);
 }
 
-const size_t		&ClapTrap::get_point_health(void) const
+const size_t&		ClapTrap::get_point_health(void) const
 {
 	return (_point_health);
 }
 
-const size_t		&ClapTrap::get_point_energy(void) const
+const size_t&		ClapTrap::get_point_energy(void) const
 {
 	return (_point_energy);
 }
 
-const size_t		&ClapTrap::get_attack_damage(void) const
+const size_t&		ClapTrap::get_attack_damage(void) const
 {
 	return (_attack_damage);
 }
 
-ClapTrap::ClapTrap(const ClapTrap &claptrap)
+ClapTrap::ClapTrap(const ClapTrap& claptrap)
 {
 	this->_name = claptrap.get_name();
 	this->_point_health = claptrap.get_point_health();
@@ -56,7 +56,7 @@ ClapTrap::ClapTrap(const ClapTrap &claptrap)
 	this->_attack_damage = claptrap.get_attack_damage();
 }
 
-ClapTrap	&ClapTrap::operator=(const ClapTrap &claptrap)
+ClapTrap&	ClapTrap::operator=(const ClapTrap& claptrap)
 {
 	this->_name = claptrap.get_name();
 	this->_point_health = claptrap.get_point_health();
@@ -80,14 +80,14 @@ bool	ClapTrap::can_do_something(void) const
 	return (0);
 }
 
-void	ClapTrap::attack(const std::string &target) const
+void	ClapTrap::attack(const std::string& target) const
 {
 	if (can_do_something())
 		return ;
 	std::cout << "CalpTrap" << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
 }
 
-void	ClapTrap::takeDamage(const unsigned int &amount)
+void	ClapTrap::takeDamage(unsigned int &amount)
 {
 	if (can_do_something())
 		return ;
@@ -103,7 +103,7 @@ void	ClapTrap::takeDamage(const unsigned int &amount)
 	_point_energy--;
 }
 
-void	ClapTrap::beRepaired(const unsigned int &amount)
+void	ClapTrap::beRepaired(unsigned int& amount)
 {
 	if (can_do_something())
 		return ;

@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 14:46:12 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/06 12:27:41 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 10:29:49 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,27 +28,27 @@ ClapTrap::~ClapTrap(void)
 	std::cout << "We lost a ClapTrap... " << std::endl;
 }
 
-const std::string	&ClapTrap::get_name() const
+const std::string&	ClapTrap::get_name() const
 {
 	return (_name);
 }
 
-const size_t		&ClapTrap::get_point_health() const
+const size_t&		ClapTrap::get_point_health() const
 {
 	return (_point_health);
 }
 
-const size_t		&ClapTrap::get_point_energy() const
+const size_t&		ClapTrap::get_point_energy() const
 {
 	return (_point_energy);
 }
 
-const size_t		&ClapTrap::get_attack_damage() const
+const size_t&		ClapTrap::get_attack_damage() const
 {
 	return (_attack_damage);
 }
 
-ClapTrap::ClapTrap(const ClapTrap &claptrap)
+ClapTrap::ClapTrap(const ClapTrap& claptrap)
 {
 	this->_name = claptrap.get_name();
 	this->_point_health = claptrap.get_point_health();
@@ -56,7 +56,7 @@ ClapTrap::ClapTrap(const ClapTrap &claptrap)
 	this->_attack_damage = claptrap.get_attack_damage();
 }
 
-ClapTrap	&ClapTrap::operator=(const ClapTrap &claptrap)
+ClapTrap&	ClapTrap::operator=(const ClapTrap& claptrap)
 {
 	this->_name = claptrap.get_name();
 	this->_point_health = claptrap.get_point_health();
@@ -87,7 +87,7 @@ void	ClapTrap::attack(const std::string &target) const
 	std::cout << "CalpTrap" << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
 }
 
-void	ClapTrap::takeDamage(const unsigned int &amount)
+void	ClapTrap::takeDamage(unsigned int &amount)
 {
 	if (can_do_something())
 		return ;
@@ -103,7 +103,7 @@ void	ClapTrap::takeDamage(const unsigned int &amount)
 	_point_energy--;
 }
 
-void	ClapTrap::beRepaired(const unsigned int &amount)
+void	ClapTrap::beRepaired(unsigned int& amount)
 {
 	if (can_do_something())
 		return ;
