@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:29:47 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/06 11:40:25 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 12:43:13 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	FragTrap::attack(const std::string& target) const
 	std::cout << "FragTrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
 }
 
-void 	FragTrap::guardGate(void) const
+void 	FragTrap::highFivesGuys(void) const
 {
-	std::cout << "FragTrap " << _name << " is now in GateKeeper mode" << std::endl;
+	std::cout << "ScavTrap " << _name << " would like to high-five" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 16:01:12 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 12:31:31 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 12:42:33 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class	ScavTrap : virtual public ClapTrap
 		ScavTrap&	operator=(const ScavTrap& scavtrap);
 
 		void	attack(const std::string& target) const;
-		void 	highFivesGuys(void) const;		
+		void 	guardGate(void) const;	
 };
 
 #endif
