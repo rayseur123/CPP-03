@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 15:47:50 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 10:36:35 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 12:35:28 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(void)
 	frag.takeDamage(damage_value);
 	scav.takeDamage(damage_value);
 	
-	frag.guardGate();
-	scav.highFivesGuys();
+	frag.highFivesGuys();
+	scav.guardGate();
 	return (0);
 }

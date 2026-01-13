@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 16:01:12 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 10:34:43 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 12:34:16 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	ScavTrap : public ClapTrap
 		ScavTrap(std::string name);
 		~ScavTrap(void);
 		void	attack(const std::string& target) const;
-		void 	highFivesGuys(void) const;		
+		void 	guardGate(void) const;	
 };
 
 #endif
