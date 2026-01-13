@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 14:46:12 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 13:37:28 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 13:43:52 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	{
 		this->_point_health -= amount;
 	}
-	std::cout << "CalpTrap " << _name << " take damages and lose " << amount << "points of health" << std::endl;
+	std::cout << "CalpTrap " << _name << " take damages and lose " << amount << " points of health" << std::endl;
 	_point_energy--;
 }
 
@@ -120,6 +120,6 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	{
 		this->_point_health += amount;
 	}
-	std::cout << "CalpTrap " << _name << " repared it self and regain " << amount << "points of health" << std::endl;
+	std::cout << "CalpTrap " << _name << " repared it self and regain " << amount << " points of health" << std::endl;
 	_point_energy--;
 }
