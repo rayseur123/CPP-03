@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 14:46:12 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 13:28:38 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 13:36:45 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,13 +65,18 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& claptrap)
 	return (*this);
 }
 
-bool	ClapTrap::can_do_something(void) const
+bool	ClapTrap::can_take_damage(void) const
 {
 	if (!_point_health)
 	{
 		std::cout << "ClapTrap "<< _name << " say : I cant move..." << std::endl;
 		return (1);
 	}
+	return (0);
+}
+
+bool	ClapTrap::can_do_something(void) const
+{
 	if (!_point_energy)
 	{
 		std::cout << "ClapTrap " << _name << " say : I am tired..." << std::endl;
@@ -89,7 +94,7 @@ void	ClapTrap::attack(const std::string& target) const
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	if (can_do_something())
+	if (can_take_damage())
 		return ;
 	if ((this->_point_health - amount) < 0)
 	{
