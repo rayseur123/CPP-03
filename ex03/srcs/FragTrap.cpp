@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:29:47 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 12:53:26 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 13:56:48 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,12 @@ FragTrap&	FragTrap::operator=(const FragTrap& fragtrap)
 	return (*this);
 }
 
-void	FragTrap::attack(const std::string& target) const
+void	FragTrap::attack(const std::string& target)
 {
+	if (can_take_damage())
+		return ;
 	std::cout << "FragTrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
+	_point_energy--;
 }
 
 void 	FragTrap::highFivesGuys(void) const

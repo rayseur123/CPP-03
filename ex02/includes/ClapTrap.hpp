@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 13:05:26 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 13:38:02 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 13:50:21 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ class	ClapTrap
 		bool	can_do_something(void) const;
 		bool	can_take_damage(void) const;
 
-		virtual void	attack(const std::string& target) const;
+		virtual void	attack(const std::string& target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
 };

@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:29:47 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 12:50:20 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 13:55:22 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,12 @@ ScavTrap&	ScavTrap::operator=(const ScavTrap& scavtrap)
 	return (*this);
 }
 
-void	ScavTrap::attack(const std::string &target) const
+void	ScavTrap::attack(const std::string &target)
 {
+	if (can_do_something())
+		return ;
 	std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
+	_point_energy--;
 }
 
 void 	ScavTrap::guardGate(void) const

@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 14:46:12 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 13:37:17 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 13:50:29 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,12 @@ bool	ClapTrap::can_do_something(void) const
 	return (0);
 }
 
-void	ClapTrap::attack(const std::string& target) const
+void	ClapTrap::attack(const std::string& target)
 {
 	if (can_do_something())
 		return ;
 	std::cout << "CalpTrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
+	_point_energy--;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
@@ -104,7 +105,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	{
 		this->_point_health -= amount;
 	}
-	std::cout << "CalpTrap " << _name << " take damages and lose " << amount << "points of health" << std::endl;
+	std::cout << "CalpTrap " << _name << " take damages and lose " << amount << " points of health" << std::endl;
 	_point_energy--;
 }
 
@@ -120,6 +121,6 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	{
 		this->_point_health += amount;
 	}
-	std::cout << "CalpTrap " << _name << " repared it self and regain " << amount << "points of health" << std::endl;
+	std::cout << "CalpTrap " << _name << " repared it self and regain " << amount << " points of health" << std::endl;
 	_point_energy--;
 }

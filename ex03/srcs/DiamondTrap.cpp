@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:56:37 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/06 11:56:23 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 13:57:50 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,12 @@ DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& diamondtrap)
 	return (*this);
 }
 
-void	DiamondTrap::attack(const std::string& target) const
+void	DiamondTrap::attack(const std::string& target)
 {
+	if (can_do_something())
+		return ;
 	ScavTrap::attack(target);
+	_point_energy--;
 }
 
 void	DiamondTrap::whoAmI(void) const
