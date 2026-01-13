@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:29:47 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 12:43:22 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 12:50:06 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ ScavTrap::ScavTrap(const std::string& name)
 
 ScavTrap::ScavTrap(const ScavTrap& scavtrap)
 {
-	_name = scavtrap.get_name();
-	_point_health = scavtrap.get_point_health();
-	_point_energy = scavtrap.get_point_energy();
-	_attack_damage = scavtrap.get_attack_damage();
+	this->_name = scavtrap._name;
+	this->_point_health = scavtrap._point_health;
+	this->_point_energy = scavtrap._point_energy;
+	this->_attack_damage = scavtrap._attack_damage;
 	std::cout << "A new ScavTrap !" << std::endl;
 }
 
@@ -47,10 +47,10 @@ ScavTrap::~ScavTrap(void)
 
 ScavTrap&	ScavTrap::operator=(const ScavTrap& scavtrap)
 {
-	this->_name = scavtrap.get_name();
-	this->_point_health = scavtrap.get_point_health();
-	this->_point_energy = scavtrap.get_point_energy();
-	this->_attack_damage = scavtrap.get_attack_damage();
+	this->_name = scavtrap._name;
+	this->_point_health = scavtrap._point_health;
+	this->_point_energy = scavtrap._point_energy;
+	this->_attack_damage = scavtrap._attack_damage;
 	return (*this);
 }
 

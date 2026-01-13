@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:29:47 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 12:43:13 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 12:53:26 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,10 @@ FragTrap::~FragTrap(void)
 
 FragTrap&	FragTrap::operator=(const FragTrap& fragtrap)
 {
-	this->_name = fragtrap.get_name();
-	this->_point_health = fragtrap.get_point_health();
-	this->_point_energy = fragtrap.get_point_energy();
-	this->_attack_damage = fragtrap.get_attack_damage();
+	this->_name = fragtrap._name;
+	this->_point_health = fragtrap._point_health;
+	this->_point_energy = fragtrap._point_energy;
+	this->_attack_damage = fragtrap._attack_damage;
 	return (*this);
 }
 

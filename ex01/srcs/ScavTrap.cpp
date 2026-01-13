@@ -6,7 +6,7 @@
 /*   By: njooris <njooris@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 11:29:47 by njooris           #+#    #+#             */
-/*   Updated: 2026/01/13 10:30:07 by njooris          ###   ########.fr       */
+/*   Updated: 2026/01/13 12:50:25 by njooris          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,15 @@ ScavTrap::ScavTrap(const std::string& name)
 ScavTrap::~ScavTrap(void)
 {
 	std::cout << "We lost a ScavTrap... " << std::endl;	
+}
+
+ScavTrap&	ScavTrap::operator=(const ScavTrap& scavtrap)
+{
+	this->_name = scavtrap._name;
+	this->_point_health = scavtrap._point_health;
+	this->_point_energy = scavtrap._point_energy;
+	this->_attack_damage = scavtrap._attack_damage;
+	return (*this);
 }
 
 void	ScavTrap::attack(const std::string& target) const
